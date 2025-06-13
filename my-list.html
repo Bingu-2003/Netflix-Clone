@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My List | Netflix Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+          alt="Netflix logo"
+          class="logo"
+        />
+      </div>
+      <div class="navbar-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="tv-shows.html" class="nav-link">TV Shows</a>
+        <a href="movies.html" class="nav-link">Movies</a>
+        <a href="new-popular.html" class="nav-link">New & Popular</a>
+        <a href="my-list.html" class="nav-link active">My List</a>
+      </div>
+      <div class="navbar-right">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-bell"></i>
+        <a href="profile-details.html">
+          <img src="ghibli.jpg" alt="Profile image" class="profile-icon" />
+        </a>
+      </div>
+    </nav>
+
+    <main class="container" style="margin-top: 100px">
+      <section class="content-section">
+        <h2 class="section-title">My List</h2>
+        <div class="content-row" id="my-list-items">
+          <p class="empty-message">
+            Your list is empty. Start adding some favorites!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <!-- Footer content here -->
+    </footer>
+  </body>
+</html>

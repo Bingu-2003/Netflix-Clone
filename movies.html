@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Movies | Netflix Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* ✅ Unified Navbar Styles */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 20px 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.7) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        z-index: 1000;
+        transition: background-color 0.3s;
+      }
+
+      .navbar.scrolled {
+        background-color: #141414;
+      }
+
+      .logo {
+        height: 25px;
+        cursor: pointer;
+      }
+
+      .navbar-nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-link {
+        color: #e5e5e5;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s;
+      }
+
+      .nav-link:hover {
+        color: #b3b3b3;
+      }
+
+      .nav-link.active {
+        font-weight: bold;
+        color: white;
+      }
+
+      .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .navbar-right i {
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+      }
+
+      .profile-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        cursor: pointer;
+        object-fit: cover;
+      }
+
+      @media (max-width: 768px) {
+        .navbar {
+          padding: 15px 20px;
+        }
+
+        .navbar-nav {
+          display: none;
+        }
+      }
+
+      .container {
+        padding: 40px 60px;
+      }
+
+      .section-title {
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      .content-row {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 20px;
+      }
+
+      .content-item {
+        position: relative;
+        margin-right: 14px;
+        transition: transform 0.3s ease;
+        min-width: 180px;
+      }
+
+      .content-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+      }
+
+      .content-item:hover {
+        transform: scale(1.06);
+        z-index: 2;
+      }
+
+      .content-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 6px;
+      }
+
+      .badge-row {
+        margin-top: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .badge {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 2px 6px;
+        font-size: 12px;
+        border-radius: 3px;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .tv-icon {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        background-color: red;
+        color: white;
+        font-size: 11px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+          alt="Netflix Logo"
+          class="logo"
+        />
+      </div>
+      <div class="navbar-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="tv-shows.html" class="nav-link">TV Shows</a>
+        <a href="movies.html" class="nav-link active">Movies</a>
+        <a href="new-popular.html" class="nav-link">New & Popular</a>
+        <a href="my-list.html" class="nav-link">My List</a>
+      </div>
+      <div class="navbar-right">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-bell"></i>
+        <a href="profile-details.html">
+          <img src="ghibli.jpg" alt="Profile image" class="profile-icon" />
+        </a>
+      </div>
+    </nav>
+
+    <main class="container" style="margin-top: 100px">
+      <section class="content-section">
+        <h2 class="section-title">Popular Movies</h2>
+        <div class="content-row" id="popular-movies"></div>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Action Movies</h2>
+        <div class="content-row" id="action-movies"></div>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Top Rated</h2>
+        <div class="content-row" id="top-rated-movies"></div>
+      </section>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script src="movies.js"></script>
+  </body>
+</html>
