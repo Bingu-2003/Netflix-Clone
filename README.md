@@ -25,6 +25,7 @@ my-list.html – My List
 profile-details.html – Profile Page
 
 📸 Preview
+![image](https://github.com/user-attachments/assets/af1e46d1-7921-4999-987a-11e49a0bb212)
 
 
 💡 Notes
